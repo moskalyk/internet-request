@@ -1,6 +1,7 @@
 import Internet, { ArgumentSchema } from './index';
 
-const ApiKey = '';
+const apiKey = 'AQAAAAAAAJ05bfLpGoDzErmWb38EkFXj3dg';
+
 
 (async () => {
   console.log('Running API Tests...');
@@ -9,10 +10,10 @@ const ApiKey = '';
   try {
     const requestPayload: ArgumentSchema = { 
         chainID: 'mainnet',
-        accountAddress: '' 
+        accountAddress: '0xBAbebe9FE973a5735D486BF6D31e9a027248024e' 
     }
 
-    const result = await Internet.request('GetEtherBalance', requestPayload, ApiKey);
+    const result = await Internet.request('GetEtherBalance', requestPayload, apiKey);
     console.log('GetEtherBalance Response:', result);
   } catch (error) {
     console.error('GetEtherBalance Test Failed:', error);
